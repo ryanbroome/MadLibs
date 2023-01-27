@@ -1,0 +1,11 @@
+{% extends "base.html"%} {% block content %}
+
+<form action="/story">
+  {% for word in words %}
+  <input class="question" id="{{word}}" type="text" placeholder="{{word}}" name="{{word}}" />
+  <br />
+  {% endfor %}
+  <button>Submit!</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{%extends "base.html" %} {% block content %}
+<label for="select_story">Select a story</label>
+<select form="select_story" name="select_story">
+  <option value="0">Story One</option>
+  <option value="1">Story Two</option>
+  <option value="2">Story Three</option>
+</select>
+<form id="select_story" action="/story_2">
+  <button>submit!</button>
+</form>
+{% endblock %}
