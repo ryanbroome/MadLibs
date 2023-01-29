@@ -58,5 +58,9 @@ story2 = Story("2", "Fortnite",
     """Only pros play on {console},  as {character}. There once was a {character}, but he  {verb} with his {weapon} to fight against the {boss}"""
 )
 
+story3 = Story("3", "Take a Trip", ["location", "location1", "adjective", "plural_noun", "noun", "emotion"], """
+On our way to the {location} we stopped at {location1}. There we saw {adjective}{plural_noun} and a {noun}. Unfortunately they were super {emotion}, so it was an interesting experience if I do say so myself.
+""")
+
 #?dictionary = {key: expression for (key, value) in iterable}
-stories = {s.code: s for s in [story, story1, story2]}
+stories = {s.code: s for s in [story, story1, story2, story3]}
