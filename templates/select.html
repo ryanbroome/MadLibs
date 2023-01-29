@@ -1,12 +1,10 @@
 {%extends "base.html" %} {% block content %}
 <h1>Select a story</h1>
 <select form="select_story_id" name="select_story_id">
-  <option value="0">Story One</option>
-  <option value="1">Story Two</option>
-  <option value="2">Story Three</option>
-  <option value="3">Story Four</option>
+  {% for ID in storyIDs %}
+  <option value="{{ID}}">Story {{ID}}</option>
+  {% endfor %}
 </select>
-
 <form id="select_story_id" action="/form_2">
   <button>submit!</button>
 </form>

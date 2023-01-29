@@ -2,7 +2,6 @@
 
 <form action="/story_2">
   <input type="text" class="hidden" name="storyID" value="{{storyID}}" />
-  <p>chosen_story {{chosen_story.prompts}}</p>
   {% for word in words %}
   <input class="question" id="{{word}}" type="text" placeholder="{{word}}" name="{{word}}" />
   <br />

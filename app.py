@@ -28,7 +28,7 @@ def generate_story():
     """
     generates string story from request arguments
     """
-    words = story.prompts
+    words = request.args
     html = story.generate(words)
     return render_template("story.html", html=html)
 
@@ -37,7 +37,8 @@ def select_story():
     """
    Display options of stories to choose from 
     """
-    return render_template("select.html")
+    storyIDs = stories.keys()
+    return render_template("select.html", storyIDs=storyIDs)
 
 @app.route("/form_2")
 def show_form_2():
@@ -45,12 +46,6 @@ def show_form_2():
     uses the story.prompts from the instantiated story 
     """
     storyID = request.args.get("select_story_id")
-    #?  if blank == blank:
-    #     words = story.prompts
-    #     elif blank == blank
-    #     words = story1.prompts
-    #     elif blank == blank
-    #     words = story2.prompts
     chosen_story = stories.get(f"{storyID}")
     words = chosen_story.prompts
     return render_template("form_2.html", words=words, chosen_story=chosen_story, storyID=storyID)
@@ -67,11 +62,11 @@ def show_form_2():
 @app.route("/story_2")
 def generate_story_2():
     """
-    generates story string from request arguments
+    generates story string from requested arguments
     """
     storyID = request.args.get("storyID")
     chosen_story = stories.get(f"{storyID}")
     words = request.args
     html = chosen_story.generate(words)
 
-    return render_template("story_2.html", storyID=storyID, words=words, html=html)
+    return render_template("story_2.html", html=html)

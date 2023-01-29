@@ -63,4 +63,6 @@ On our way to the {location} we stopped at {location1}. There we saw {adjective}
 """)
 
 #?dictionary = {key: expression for (key, value) in iterable}
+# TODO to create and add stories to dictionary will need to adjust the below to automate adding to the dictionary when created. 
+# TODO as of now creating a story will require manually typing above and then adding to the below list within the dictionary comprehension
 stories = {s.code: s for s in [story, story1, story2, story3]}

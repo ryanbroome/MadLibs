@@ -45,7 +45,7 @@ input, label, select {
     visibility: hidden;
 }
 
-/* ! */
+/* * pasted in styling for inputs off of codepen for all styling below */
 html {
     font-family: 'Lora', sans-serif;
     width: 100%;
@@ -83,7 +83,7 @@ input:focus {
 
 input.question,
 p.question {
-    font-size: 48px;
+    font-size: 24px;
     font-weight: 300;
     border-radius: 2px;
     margin: 0;
@@ -156,7 +156,7 @@ p.question+label>span {
     margin: 0;
     position: absolute;
     color: #8F8F8F;
-    font-size: 48px;
+    font-size: 24px;
     top: -66px;
     left: 0px;
     z-index: -1;
