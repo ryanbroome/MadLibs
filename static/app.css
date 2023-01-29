@@ -5,16 +5,8 @@ h1 {
     text-align: center;
 }
 
-h1:hover {
-    color: black;
-    background-color: red;
-    box-shadow: #f2f2f2;
-    float: center;
-    text-align: center;
-}
-
 body {
-    background-color: rgb(163, 163, 163);
+    background-color: #8d8d8d;
     padding: 0;
     margin: 0;
 }
@@ -45,8 +37,12 @@ input, label, select {
 
 .content {
     display: flex;
-    background-color: purple;
+    background-color: #be3abe;
 
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 /* ! */

@@ -1,11 +1,13 @@
-{%extends "base.html" %} {% block content %}
-<label for="select_story">Select a story</label>
-<select form="select_story" name="select_story">
-  <option value="0">Story One</option>
-  <option value="1">Story Two</option>
-  <option value="2">Story Three</option>
-</select>
-<form id="select_story" action="/story_2">
-  <button>submit!</button>
+{% extends "base.html"%} {% block content %}
+
+<form action="/story_2">
+  <input type="text" class="hidden" name="storyID" value="{{storyID}}" />
+  <p>chosen_story {{chosen_story.prompts}}</p>
+  {% for word in words %}
+  <input class="question" id="{{word}}" type="text" placeholder="{{word}}" name="{{word}}" />
+  <br />
+  {% endfor %}
+  <button>Submit!</button>
 </form>
+
 {% endblock %}
